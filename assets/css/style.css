@@ -15,5 +15,32 @@
 }
 
 
+.ggez
+{
+ font-size: 60px;
+ margin-left: 20px;
+    color: blue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
 
+/* title-font sm:text-4xl text-9xl mb-5 font-medium text-black  */
 
+.gg{
+    font-size: 50px;
+    color:blueviolet;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+.lol
+{
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    background-color: white;
+    z-index: 1000;
+}
