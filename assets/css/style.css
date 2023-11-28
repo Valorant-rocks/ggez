@@ -18,7 +18,7 @@
 .ggez
 {
  font-size: 60px;
- margin-left: 20px;
+ margin-left: 10px;
     color: blue;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
@@ -44,3 +44,25 @@ html
     background-color: white;
     z-index: 1000;
 }
+
+
+.disW{
+    opacity: 0;
+    transform:translateY(100%);
+    transition: all 1s;
+    }
+    
+    .show{
+    opacity: 1;
+    transform:translateY(0);
+    transition: all 1s;
+    }
+
+
+    .fuckoff{
+        display: grid;
+        place-items: center;
+        align-content: center;
+        min-height: 100vh;
+        color: blue;
+    }
