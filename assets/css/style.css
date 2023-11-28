@@ -66,3 +66,11 @@ html
         min-height: 100vh;
         color: blue;
     }
+
+
+    .disW_
+    {opacity: 0;
+        transform:translateY(100%);
+        transition: all 1s;
+
+    }
