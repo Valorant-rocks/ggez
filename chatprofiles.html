@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speak | Removing Boundaries, Healing Souls</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+ <script defer src="chatprofiles.js"></script>
+ <link rel="stylesheet" href="assets\css\style.css">
+ <style>
+
+
+
+
+main {
+  
+  width: 100%;
+  
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+
+.item {
+  width: 200px;
+  height: 300px;
+  margin-top: 1200px;
+  list-style-type: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  box-shadow: 0 20px 30px rgba(255,255,255,0.3) inset;
+  transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s, height 0.75s;
+
+  &:nth-child(1), &:nth-child(2) {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: none;
+    border-radius: 0;
+    box-shadow: none;
+    opacity: 1;
+  }
+
+  &:nth-child(3) { left: 50%; }
+  &:nth-child(4) { left: calc(50% + 220px); }
+  &:nth-child(5) { left: calc(50% + 440px); }
+  &:nth-child(6) { left: calc(50% + 660px); opacity: 0; }
+}
+
+.content {
+  width: min(30vw,400px);
+  position: absolute;
+  top: 50%;
+  left: 3rem;
+  transform: translateY(-50%);
+  font: 400 0.85rem helvetica,sans-serif;
+  color: white;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.5);
+  opacity: 0;
+  display: none;
+
+  & .title {
+    font-family: 'arial-black';
+    text-transform: uppercase;
+  }
+
+  & .description {
+    line-height: 1.7;
+    margin: 1rem 0 1.5rem;
+    font-size: 0.8rem;
+  }
+
+  & button {
+    width: fit-content;
+    background-color: rgba(0,0,0,0.1);
+    color: white;
+    border: 2px solid white;
+    border-radius: 0.25rem;
+    padding: 0.75rem;
+    cursor: pointer;
+  }
+}
+
+.item:nth-of-type(2) .content {
+  display: block;
+  animation: show 0.75s ease-in-out 0.3s forwards;
+}
+
+@keyframes show {
+  0% {
+    filter: blur(5px);
+    transform: translateY(calc(-50% + 75px));
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+
+
+  
+    .nav {
+  display: grid;
+  grid-auto-flow: column; /* Arrange items in a column */
+  justify-content: center;
+  align-items: center;
+  gap: 3rem; 
+  margin-top: 1100px;/* Adjust the gap between buttons as needed */
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  user-select: none;
+ /* Adjust the position of the buttons from the bottom as needed */
+}
+ /* Adjust the position of the buttons from the bottom as needed */
+
+
+
+
+  & .btn {
+    background-color: rgba(255,255,255,0.5);
+    color: rgba(0,0,0,0.7);
+    border: 2px solid rgba(0,0,0,0.6);
+    margin: 0 0.25rem;
+    padding: 0.75rem;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+      background-color:lightblue;
+    }
+  }
+}
+
+@media (width > 650px) and (width < 900px) {
+  .content {
+    & .title        { font-size: 1rem; }
+    & .description  { font-size: 0.7rem; }
+    & button        { font-size: 0.7rem; }
+  }
+  .item {
+    width: 160px;
+    height: 270px;
+
+    &:nth-child(3) { left: 50%; }
+    &:nth-child(4) { left: calc(50% + 170px); }
+    &:nth-child(5) { left: calc(50% + 340px); }
+    &:nth-child(6) { left: calc(50% + 510px); opacity: 0; }
+  }
+}
+
+@media (width < 650px) {
+  .content {
+    & .title        { font-size: 0.9rem; }
+    & .description  { font-size: 0.65rem; }
+    & button        { font-size: 0.7rem; }
+  }
+  .item {
+    width: 130px;
+    height: 220px;
+
+    &:nth-child(3) { left: 50%; }
+    &:nth-child(4) { left: calc(50% + 140px); }
+    &:nth-child(5) { left: calc(50% + 280px); }
+    &:nth-child(6) { left: calc(50% + 420px); opacity: 0; }
+  }
+}
+
+  </style>
+    </head>
+
+    <header class="lol text-gray-600 body-font">
+      <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+        <a href="index.html" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            
+          </svg> -->
+          <img src="assets\images\hero-logo.png" class="w-20 h-20 text-white p-2  " alt="">
+       </a>
+        <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+          <a href="Ai.html" class="mr-20 hover:text-gray-900 text-lg">Chat With AI</a>
+          <a href="people.html"class="mr-20 hover:text-gray-900 text-lg">Chat With People</a>
+          <a href="blog.html"class="mr-20 hover:text-gray-900 text-lg">Blog</a>
+          <a href="About.html"class="mr-20 hover:text-gray-900 text-lg">About US</a>
+        </nav>
+        <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Button
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      </div>  
+    </header>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="pop container mx-auto flex px-5 py-0 items-center justify-center flex-col">
+      <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-0 object-cover object-center rounded" class="pop" alt="hero" src="assets\images\image.png">
+      <div class="text-center lg:w-2/3 w-full">
+        <br>
+        <h1><span class="ggez_ title-font sm:text-4xl text-9xl mb-5 font-medium text-black font-bold">Introducing</span> <span class="ggez ">Speak</span></h1>
+        <br>
+        <p class="leading-relaxed mb-8 text-black">Discover Speak - a dynamic platform where you can chat with both people and AI, find support, and share your thoughts through blogs. A personal therapist that makes you cheer up!</p>
+        <div class="flex justify-center">
+          <a href="#herodown" class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Functions</a>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+    <main>
+      <ul class='slider'>
+        <li class='item 'id="herodown" style="background-image: url(''https://cdn.vox-cdn.com/thumbor/H1A3QiZ1dYN5NkjnlP9soG3GCss=/0x0:4000x3050/1520x1013/filters:focal(1743x712:2383x1352)/cdn.vox-cdn.com/uploads/chorus_image/image/66227180/NathanG_09272021CG_01960_R1.25.jpg')">
+          <div class='content' >
+            <h2 class='title'style="color: black">bitchss Youths</h2>
+            <p class='description' style="color:black"> Lorem ipsum, dolor sit amet consectetur
+            adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+            praesentium nisi. Id laboriosam ipsam enim.  </p>
+            <button>Read More</button>
+          </div>
+        </li>
+        <li class='item' style="background-image: url('https://images.pexels.com/photos/1543/landscape-nature-man-person.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')">
+          <div class='content'>
+            <h2 class='title'>Lossless Youths</h2>
+            <p class='description' > Lorem ipsum, dolor sit amet consectetur
+            adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+            praesentium nisi. Id laboriosam ipsam enim.  </p>
+            <button>Read More</button>
+          </div>
+        </li>
+        <li class='item' style="background-image: url('https://th.bing.com/th/id/R.8f4b0ffe016d7161fe1b2428195ed641?rik=GLWFdrXOdTfAMw&pid=ImgRaw&r=0&sres=1&sresct=1')">
+          <div class='content'>
+            <h2 class='title'>"The Gate Keeper"</h2>
+            <p class='description'> Lorem ipsum, dolor sit amet consectetur
+            adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+            praesentium nisi. Id laboriosam ipsam enim.  </p>
+            <button>Read More</button>
+          </div>
+        </li>
+        <li class='item' style="background-image: url('https://th.bing.com/th/id/R.bc23ae01ed92e163a086f5e57dd77ceb?rik=ab69%2fvbyNpjBvw&pid=ImgRaw&r=0')">
+          <div class='content'>
+            <h2 class='title'style="color: black">Lossless Youths</h2>
+            <p class='description' style="color:black"> Lorem ipsum, dolor sit amet consectetur
+            adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+            praesentium nisi. Id laboriosam ipsam enim.  </p>
+            
+            <button>Read More</button>
+          </div>
+        </li>
+        <li class='item' style="background-image: url('https://th.bing.com/th/id/R.d60868313c1c68befe29cd38c55d3f57?rik=X6KdSB5jSGwqow&pid=ImgRaw&r=0')">
+          <div class='content'>
+            <h2 class='title'style="color: black">Lossless Youths</h2>
+            <p class='description' style="color:black"> Lorem ipsum, dolor sit amet consectetur
+            adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+            praesentium nisi. Id laboriosam ipsam enim.  </p>
+            <button>Read More</button>
+          </div>
+        </li>
+       
+        
+      </ul>
+      <nav class='nav'>
+        <ion-icon class='btn prev' name="arrow-back-outline"></ion-icon>
+        <ion-icon class='btn next' name="arrow-forward-outline"></ion-icon>
+      </nav>
+    </main>
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+      
+    </body>
+    </html>
