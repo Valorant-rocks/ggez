@@ -186,6 +186,11 @@ label.light {
      margin: 0.5em;
      padding: 1em 2em;
    }/*# sourceMappingURL=lmao.css.map */
+   .always-hover {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+  transition: 0.25s; /* Adding transition for smooth effect */
+}
      </style>
      </head>
    <body>
@@ -205,7 +210,7 @@ label.light {
                <a href="blog.html"class="butane mr-20 hover:text-gray-900 text-lg">Blog</a>
                <a href="About.html"class="butane mr-20 hover:text-gray-900 text-lg">About US</a>
              </nav> -->
-             <a href="people.html"><button class="raise" style="font-size: 18px; margin-left: -10px;">Chat With People</button></a>
+             <a href="people.html"><button class="raise text-black" id="myButton"style="font-size: 18px; margin-left: -10px;">Chat With People</button></a>
              <a href="blog.html"><button class="raise" style="font-size: 18px; margin-left: -10px;">Blogs</button></a>
              <a href="About.html"><button class="raise" style="font-size: 18px; margin-left: -30px;">About Us</button></a>
    
@@ -287,15 +292,25 @@ label.light {
           
          </fieldset>
        
-      <center> <button class="raise" style="background-color:rgb(66, 66, 231); color:white;"> <a href="chatprofiles.html">Connect With People</a></button>
+      <center><a href="chatprofiles.html" class="raise" style="background-color:rgb(66, 66, 231); color:white; padding: 1rem;"> Connect With People</a></center>
       </center>
       
        </form>
         </div>
       </div>
-      
+      <script>
+        window.onload = function() {
+window.scrollTo(0, 0);
+};
+
+// Apply the always-hover class to the button on page load
+document.addEventListener('DOMContentLoaded', function() {
+const myButton = document.getElementById('myButton');
+myButton.classList.add('always-hover');
+});
+</script>
+
     </body>
 </html>
 
-      </body>
-      </html>
+    

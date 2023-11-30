@@ -85,7 +85,13 @@
      line-height: 1;
      margin: 0.5em;
      padding: 1em 2em;
-   }/*# sourceMappingURL=lmao.css.map */
+   }/*# sourceMappingU
+   RL=lmao.css.map */
+   .always-hover {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+  transition: 0.25s; /* Adding transition for smooth effect */
+}
      </style>
      </head>
    <body>
@@ -105,7 +111,7 @@
                <a href="blog.html"class="butane mr-20 hover:text-gray-900 text-lg">Blog</a>
                <a href="About.html"class="butane mr-20 hover:text-gray-900 text-lg">About US</a>
              </nav> -->
-             <a href="people.html"><button class="raise" style="font-size: 18px; margin-left: -10px;">Chat With People</button></a>
+             <a href="people.html"><button class="raise text-black" id="myButton"style="font-size: 18px; margin-left: -10px;">Chat With People</button></a>
              <a href="blog.html"><button class="raise" style="font-size: 18px; margin-left: -10px;">Blogs</button></a>
              <a href="About.html"><button class="raise" style="font-size: 18px; margin-left: -10px;">About Us</button></a>
    
@@ -139,8 +145,7 @@
           </div>
           <span class="span">Forgot password?</span>
         </div>
-        <a href="ownprofile.html">
-      <center><button  class="raise" style="background-color:black; color:white;">Sign In</a></button></center>
+   <center><a href="ownprofile.html"  class="raise" style="background-color:black; color:white; width: 69px; padding: 7px;">Sign In</a></center>
         <p class="p">Don't have an account? <span class="span">Sign Up</span>
         </p><p class="p line">Or With</p>
     
@@ -170,5 +175,17 @@
             Apple 
             
     </button></div></form></center>
+    <script>
+                 window.onload = function() {
+  window.scrollTo(0, 0);
+};
+
+// Apply the always-hover class to the button on page load
+document.addEventListener('DOMContentLoaded', function() {
+  const myButton = document.getElementById('myButton');
+  myButton.classList.add('always-hover');
+});
+    </script>
+    
       </body>
       </html>

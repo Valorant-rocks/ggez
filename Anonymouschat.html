@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Speak | Removing Boundaries, Healing Souls</title>
-   <link rel="stylesheet" href="index.css">
+   <link rel="stylesheet" href="assets\css\style.css">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 
    <style>
@@ -86,6 +86,12 @@
      margin: 0.5em;
      padding: 1em 2em;
    }/*# sourceMappingURL=lmao.css.map */
+   .always-hover {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+  transition: 0.25s; /* Adding transition for smooth effect */
+}
+   
      </style>
      </head>
    <body>
@@ -105,7 +111,7 @@
                <a href="blog.html"class="butane mr-20 hover:text-gray-900 text-lg">Blog</a>
                <a href="About.html"class="butane mr-20 hover:text-gray-900 text-lg">About US</a>
              </nav> -->
-             <a href="people.html"><button class="raise" style="font-size: 18px; margin-left: -10px;">Chat With People</button></a>
+             <a href="people.html"><button id="myButton"class="raise text-black" style="font-size: 18px; margin-left: -10px;">Chat With People</button></a>
              <a href="blog.html"><button class="raise" style="font-size: 18px; margin-left: -10px;">Blogs</button></a>
              <a href="About.html"><button class="raise" style="font-size: 18px; margin-left: -30px;">About Us</button></a>
    
@@ -117,7 +123,7 @@
       <section class="pop text-gray-600 body-font">
         <div class="container px-5  mx-auto">
           <div class="text-center mb-20">
-            <h1 class="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 mb-4" style="color: blue;font-size: 60px;"><b>Chat With People</b></h1>
+            <h1 class=" sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 mb-4" style="color: blue;font-size: 60px;"><b>Chat With People</b></h1>
           
             <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">Get connected to a live server and talk to people randomly from all across the Globe.Talk about something, share your confession, meet a cheerful community that makes you cheer up:)</p>
           </div>
@@ -168,7 +174,17 @@
       </section>
 
      
-    
+    <script>
+              window.onload = function() {
+  window.scrollTo(0, 0);
+};
+
+// Apply the always-hover class to the button on page load
+document.addEventListener('DOMContentLoaded', function() {
+  const myButton = document.getElementById('myButton');
+  myButton.classList.add('always-hover');
+});
+    </script>
 
 </body>
 </html>
